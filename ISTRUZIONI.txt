@@ -1,0 +1,18 @@
+SITO FEDERICO CACCIAFESTA — FILE PRONTI PER GITHUB PAGES
+
+Questa versione e stata preparata per il repository mostrato negli screenshot,
+nel quale i file sono nella cartella principale, NON in assets/.
+
+1. Apri su GitHub il repository federicocacciafesta-svg.github.io.
+2. Scegli Add file > Upload files.
+3. Trascina il CONTENUTO di questa cartella, non la cartella stessa.
+   index.html, research.html, publications.html, teaching.html,
+   contact.html, style.css, app.js, data.js, favicon.svg,
+   federico-cacciafesta.jpg, CV_Cacciafesta_EN.pdf, CV_Cacciafesta_EN.tex.
+4. Premi Commit changes.
+5. In Actions attendi un NUOVO pages build and deployment con segno verde.
+6. Apri https://federicocacciafesta-svg.github.io/ e ricarica con Cmd + Shift + R.
+
+La cartella Sito_Federico_Cacciafesta_... eventualmente presente nel repository
+non serve; per il momento puoi lasciarla. L'importante e che i file siano
+nella cartella principale del repository.
