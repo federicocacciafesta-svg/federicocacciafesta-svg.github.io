@@ -1,0 +1,449 @@
+\documentclass[10pt,a4paper]{article}
+% ------------------------------------------------------------
+% Recommended compilation: pdflatex (2 passes)
+% ------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{newtxtext,newtxmath}
+\usepackage[a4paper,margin=1.65cm,top=1.45cm,bottom=1.55cm]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{needspace}
+\usepackage{etoolbox}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{muted}{HTML}{5C6670}
+\definecolor{light}{HTML}{EAF0F6}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Federico Cacciafesta},
+  pdftitle={Curriculum vitae - Federico Cacciafesta}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=2.5pt,topsep=3pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}[\vspace{-2pt}\color{accent}\rule{\textwidth}{0.45pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{accent}}
+  {}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% Avoid orphaned section headings at the bottom of a page.
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize Federico Cacciafesta}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+\newcommand{\cvrow}[2]{%
+  \begin{tabularx}{\textwidth}{@{}L{2.35cm}Y@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\vspace{1pt}
+}
+
+\newcommand{\yearrow}[2]{%
+  \begin{tabularx}{\textwidth}{@{}L{2.05cm}Y@{}}
+    \textcolor{muted}{#1} & #2
+  \end{tabularx}\vspace{1pt}
+}
+
+\newcommand{\yearitems}[2]{%
+  \begin{tabularx}{\textwidth}{@{}L{2.05cm}Y@{}}
+    \textcolor{muted}{#1} &
+    \begin{minipage}[t]{\linewidth}
+      \begin{itemize}[leftmargin=1.15em,itemsep=0.8pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+        #2
+      \end{itemize}
+    \end{minipage}
+  \end{tabularx}\vspace{1.5pt}
+}
+
+\newcommand{\venue}[1]{\textbf{#1}}
+\newcommand{\FC}{{F. Cacciafesta}}
+\newcommand{\selected}{\textsuperscript{\color{accent}$\star$}}
+\newcommand{\euro}{\mbox{EUR}}
+
+% Once the final selection of fifteen items has been made, \selected may be added
+% after the titles of the selected publications.
+% Once the detailed VQR product classifications are known, add
+% \vqrA oppure \vqrB to the relevant publication.
+
+\begin{document}
+
+% ============================================================
+% HEADING
+% ============================================================
+\begin{minipage}[t]{0.68\textwidth}
+  {\LARGE\bfseries\color{accent} Federico Cacciafesta}\\[2pt]
+  {\large Associate Professor of Mathematical Analysis -- MATH-03/A}\\
+  Department of Mathematics ``Tullio Levi-Civita'' -- University of Padova
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\textwidth}
+  \RaggedLeft
+  \href{mailto:federico.cacciafesta@unipd.it}{federico.cacciafesta@unipd.it}\\
+  \href{https://sites.google.com/view/fcacciafesta/home}{sites.google.com/view/fcacciafesta}\\
+  Padova, Italy\\
+\end{minipage}
+
+
+
+\section{Academic appointments, qualifications and education}
+
+\yearrow{Mar. 2020--present}{\textbf{Associate Professor}, Department of Mathematics, University of Padova.}
+\yearrow{2023}{Italian National Scientific Qualification for the position of Full Professor, sector 01/A3 (now MATH-03/A).}
+\yearrow{2018}{Italian National Scientific Qualification for the position of Associate Professor, sector 01/A3 (now MATH-03/A).}
+\yearrow{Mar. 2017--Mar. 2020}{Fixed-term Researcher (type B), University of Padova.}
+\yearrow{Jan.--Mar. 2017}{Fixed-term Researcher (type A), Polytechnic University of Turin.}
+\yearrow{Mar. 2016--Jan. 2017}{Postdoctoral Research Fellow, University of Milano-Bicocca.}
+\yearrow{Mar. 2013--Feb. 2016}{Postdoctoral Research Fellow under the FIRB 2012 project ``Dispersive Dynamics, Fourier Analysis and Variational Methods'', Sapienza University of Rome.}
+\yearrow{2015}{\emph{Qualification aux fonctions de Ma\^itre de conf\'erences}, France.}
+\yearrow{2012}{PhD in Mathematics, Sapienza University of Rome. Dissertation: \emph{Dispersive properties of the Dirac equation}. Supervisor: P. D'Ancona. Examination committee: L. Vega, V. Georgiev, S. Selberg.}
+\yearrow{2008}{Master's degree in Mathematics, Sapienza University of Rome, 110/110 cum laude. Dissertation: \emph{Hardy spaces, duality $H^1$--BMO and applications}. Advisor: A. Pisante.}
+\yearrow{2006}{Bachelor's degree in Mathematics, Sapienza University of Rome, 110/110 cum laude.}
+
+
+% When available, insert the detailed product classifications here:
+% \begin{tabularx}{\textwidth}{@{}Y L{1.8cm}@{}}
+% \textbf{Product} & \textbf{Class} \\
+% Title of product 1 & A \\
+% ... & ...
+% \end{tabularx}
+
+\section{Research funding and leadership}
+
+\subsection{Funding awarded as Principal Investigator}
+\yearrow{2019}{\textbf{STARS--Starting Grant}, University of Padova. Project: \emph{Linear and Nonlinear Problems for the Dirac Equation} (LANPDE). Role: Principal Investigator. Funding: \textbf{\euro\,85,000}. }
+%The project supported the development of research on Dirac equations with critical potentials, singular interactions and non-Euclidean geometries.}
+\yearrow{2015}{``Research Start-up'' project, Sapienza University of Rome. \emph{Dispersive Dynamics for the Dirac Equation}. Funding: \euro\,2,400.}
+\yearrow{2014}{``Research Start-up'' project, Sapienza University of Rome. \emph{Dispersive Partial Differential Equations with Variable Coefficients}. Funding: \euro\,2,500.}
+\yearrow{2013}{``Research Start-up'' project, Sapienza University of Rome. \emph{Static and dynamical aspects of the nonlinear Dirac equation}. Funding: \euro\,2,000.}
+
+\subsection{Participation in funded research projects}
+\yearrow{2026}{Member of the PRIN project \emph{Order and randomness in Hamiltonian dynamics and dispersive PDEs}, grant code 2026PHMPHK (total funding \euro\,1,127,998).}
+\yearrow{2026}{Member of the GNAMPA project \emph{Linear and nonlinear phenomena for Dirac equations} (\euro\,2,000).}
+\yearrow{2024}{Member of the GNAMPA project \emph{Dispersive properties of Dirac equations} (\euro\,2,500).}
+\yearrow{2023}{Member of the GNAMPA project \emph{Spectral Analysis for the Dirac Equation and Applications} (\euro\,2,500).}
+\yearrow{2021}{Member of the PRIN project \emph{Hamiltonian and Dispersive PDEs}, grant code 2020XB3EFL (total funding \euro\,540,000).}
+\yearrow{2010--2012}{Participated in three GNAMPA projects on dispersive equations and hyperbolic systems.}
+
+\newpage
+\section{Research supervision}
+
+\subsection{PhD students}
+\yearrow{2025--present}{\textbf{Simone Mundula}, PhD student in Mathematics, University of Padova. Supervisor.}
+\yearrow{2021--2024}{\textbf{Elena Danesi}, PhD graduate in Mathematics, University of Padova. Supervisor; Degree awarded in 2024.}
+
+\subsection{Postdoctoral researchers}
+\yearrow{2021--2022}{\textbf{J\'er\'emy Sok}, postdoctoral research supervision.}
+\yearrow{2021--2022}{\textbf{Long Meng}, postdoctoral research supervision.}
+
+\section{Scientific publications}
+
+%\textit{Across the VQR 2015--2019 and VQR 2020--2024 evaluation rounds,
+%a total of eight scientific outputs were attributed to the candidate,
+%four in each round. Six received an A rating
+%and two received a B rating.}
+
+\begin{enumerate}[label=\arabic*.,wide=0pt]
+\small
+\item \FC, P. D'Ancona, Z. Yin, J. Zhang, \emph{Dispersive estimates for Dirac equations in Aharonov--Bohm magnetic fields: massless case}, \venue{Journal of Functional Analysis} 290 (2026), 111267.
+
+\item \FC, A. S. de Suzzoni, L. Meng, J. Sok, \emph{Large time well-posedness for a Dirac--Klein--Gordon system}, \venue{Nonlinear Analysis} 239 (2024), 113420.
+
+\item \FC, E. Danesi, L. Meng, \emph{Strichartz estimates for the half-wave/Klein--Gordon and Dirac equations on compact manifolds without boundary}, \venue{Mathematische Annalen} 389 (2024), no. 3, 3009--3042.
+
+\item \FC, A. S. de Suzzoni, L. Meng, \emph{Strichartz estimates for the Dirac equation on asymptotically flat manifolds}, \venue{Annali della Scuola Normale Superiore di Pisa, Classe di Scienze} (5) 25 (2024), 1799--1812.
+
+\item \FC, E. S\'er\'e, J. Zhang, \emph{Asymptotic estimates for the wave functions of the Dirac--Coulomb operator and applications}, \venue{Communications in Partial Differential Equations} 48 (2023), no. 3, 355--385.
+
+\item J. Ben-Artzi, \FC, A. S. de Suzzoni, J. Zhang, \emph{Global-in-time Strichartz estimates for the Dirac equation on spherically symmetric spaces}, \venue{Forum of Mathematics, Sigma} 10 (2022), e25, 1--38.
+
+\item \FC, A. S. de Suzzoni, \emph{Local-in-time Strichartz estimates for the Dirac equation on spherically symmetric spaces}, \venue{International Mathematics Research Notices} 2022, no. 4, 2729--2771.
+
+\item \FC, Z. Yin, J. Zhang, \emph{Generalized Strichartz estimates for wave and Dirac equations in Aharonov--Bohm magnetic fields}, \venue{Dynamics of Partial Differential Equations} 19 (2022), no. 1, 71--90.
+
+\item \FC, M. Strani, B. Texier, \emph{Dispersive regularization for phase transition}, \venue{Pure and Applied Analysis}   3(4), (2021), pp. 765-788.
+
+\item \FC, A. S. de Suzzoni, \emph{Invariance of Gibbs measures under the flows of Hamiltonian equations on the real line}, \venue{Communications in Contemporary Mathematics} 22 (2020), no. 2, 1950012.
+
+\item \FC, A. S. de Suzzoni, D. Noja, \emph{A Dirac field interacting with point nuclear dynamics}, \venue{Mathematische Annalen} 376 (2020), 1261--1301.
+
+\item \FC, A. S. de Suzzoni, \emph{Weak dispersion for the Dirac equation on curved spaces}, \venue{Discrete and Continuous Dynamical Systems} 39 (2019), no. 8, 4359--4398.
+
+\item \FC, L. Fanelli, \emph{Weak dispersive estimates for fractional Aharonov--Bohm--Schr\"odinger groups}, \venue{Dynamics of Partial Differential Equations} 16 (2019), no. 1, 95--103.
+
+\item \FC, P. D'Ancona, R. Luc\`a, \emph{A limiting absorption principle with variable coefficients}, \venue{Journal of Spectral Theory} 8 (2018), no. 4, 1349--1392.
+
+\item \FC, L. Fanelli, \emph{Dispersive estimates for the Dirac equation in an Aharonov--Bohm field}, \venue{Journal of Differential Equations} 263 (2017), no. 7, 4382--4399.
+
+\item \FC, E. S\'er\'e, \emph{Local smoothing estimates for the massless Dirac--Coulomb equation in two and three space dimensions}, \venue{Journal of Functional Analysis} 271 (2016), no. 8, 2339--2358.
+
+\item \FC, P. D'Ancona, R. Luc\`a, \emph{Helmholtz and dispersive equations with variable coefficients on exterior domains}, \venue{SIAM Journal on Mathematical Analysis} 48 (2016), no. 3, 1798--1832.
+
+\item \FC, R. Luc\`a, \emph{Singular integrals with angular integrability}, \venue{Proceedings of the American Mathematical Society} 144 (2016), 3413--3418.
+
+\item \FC, A. S. de Suzzoni, \emph{Invariant measures for the Schr\"odinger equation on the real line}, \venue{Journal of Functional Analysis} 269 (2015), no. 1, 271--324.
+
+\item \FC, A. S. de Suzzoni, \emph{Continuity of the flow of KdV with regard to the Wasserstein metrics and application to an invariant measure}, \venue{Journal of Differential Equations} 259 (2015), no. 3, 1024--1067.
+
+\item \FC, \emph{Smoothing estimates for variable-coefficient Schr\"odinger equations with electromagnetic potential}, \venue{Journal of Mathematical Analysis and Applications} 402 (2013), 286--296.
+
+\item \FC, P. D'Ancona, \emph{Endpoint estimates and global existence for the nonlinear Dirac equation with a potential}, \venue{Journal of Differential Equations} 254 (2013), 2233--2260.
+
+\item \FC, P. D'Ancona, \emph{Weighted $L^p$ estimates for powers of selfadjoint operators}, \venue{Advances in Mathematics} 229 (2012), 501--530.
+
+\item \FC, \emph{Virial identity and dispersive estimates for the $n$-dimensional Dirac equation}, \venue{Journal of Mathematical Sciences, University of Tokyo} 18 (2011), 1--23.
+
+\item \FC, \emph{Global small solutions to the critical Dirac equation with potential}, \venue{Nonlinear Analysis} 74 (2011), 6060--6073.
+\end{enumerate}
+
+\subsection{Proceedings}
+\begin{itemize}
+\small
+\item \FC, E. S\'er\'e, J. Zhang, \emph{Dispersive estimates for the Dirac--Coulomb equation}, Springer INdAM Series 52, 2021.
+\item \FC, L. Fanelli, \emph{Hankel transforms and weak dispersion}, Matrix Annals 2019--20.
+\item \FC, \emph{Dispersive dynamics of the Dirac equation on curved spaces}, Proceedings of HYP 2018, AIMS on Applied Mathematics 10, 346--352.
+\item \FC, \emph{Stability of invariant measures and continuity of the KdV flow}, Bulletin of the Brazilian Mathematical Society 47 (2016), 1--10.
+\item \FC, \emph{The cubic nonlinear Dirac equation}, Actes des Journ\'ees EDP 2012.
+\end{itemize}
+
+\subsection{Preprints and submitted papers}
+\begin{itemize}
+\small
+\item \FC, E. Danesi, E. S\'er\'e, \emph{Generalized Strichartz estimates for the massive Dirac equation with critical potentials}, submitted, \url{https://arxiv.org/abs/2510.23283}.
+\item \FC, S. Mundula, \emph{Global well-posedness and growth of Sobolev norms for nonlinear Dirac equations with Yukawa potential on compact manifolds}, submitted, \url{https://arxiv.org/abs/2607.03242}.
+\item \FC, P. D'Ancona, Z. Yin, J. Zhang, \emph{Dispersive estimates for Dirac equations in Aharonov--Bohm magnetic fields: massive case}, submitted, \url{https://arxiv.org/abs/2510.23283}.
+
+\end{itemize}
+
+\section{International scientific activities}
+
+\subsection{International research programmes and visits}
+\yearrow{2015}{\textbf{Mathematical Sciences Research Institute (MSRI), Berkeley}. Research Member of the programme \emph{New Challenges in PDE: Deterministic Dynamics and Randomness in High and Infinite Dimensional Systems}, three weeks.}
+\yearrow{2014--2016}{\textbf{CEREMADE, Universit\'e Paris-Dauphine}. Four research visits at the invitation of Prof. E. S\'er\'e, totalling approximately ten months.}
+\yearrow{2014}{\textbf{Hausdorff Research Institute for Mathematics (HIM), Bonn}. Participant in the programme \emph{Harmonic Analysis and Partial Differential Equations}, two months.}
+\yearrow{2013}{\textbf{Institut Henri Poincar\'e (IHP), Paris}. Participant in the three-month programme \emph{Variational and Spectral Methods in Quantum Mechanics}, three months.}
+
+\subsection{Invited seminars}
+\yearitems{2026}{
+  \item Sapienza University of Rome.
+}
+\yearitems{2025}{
+  \item Gran Sasso Science Institute (GSSI), L'Aquila.
+}
+\yearitems{2024}{
+  \item University of Edinburgh (online).
+}
+\yearitems{2023}{
+  \item University of Basel.
+}
+\yearitems{2022}{
+  \item Universit\"at Bielefeld (online).
+}
+\yearitems{2020}{
+  \item Cardiff University.
+}
+\yearitems{2018}{
+  \item SISSA, Trieste.
+  \item Sapienza University of Rome.
+}
+\yearitems{2017}{
+  \item University of Padova.
+}
+\yearitems{2016}{
+  \item University of Z\"urich.
+  \item University of Rome Tor Vergata.
+  \item University of Milano-Bicocca.
+}
+\yearitems{2015}{
+  \item Universit\'e Paris 13.
+}
+\yearitems{2013}{
+  \item Institut Henri Poincar\'e, Paris.
+  \item Sapienza University of Rome.
+}
+\yearitems{2012}{
+  \item Universit\'e de Cergy-Pontoise.
+  \item Sapienza University of Rome.
+}
+
+\subsection{Invited conference and workshop talks}
+\yearitems{2025}{
+  \item Workshop \emph{Singular Interactions and Effective Models in Mathematical Physics}, Como.
+}
+\yearitems{2024}{
+  \item Workshop \emph{Hamiltonian and Dispersive PDEs}, Milan.
+  \item Conference \emph{Running START in Analysis}, Caserta.
+  \item Conference on \emph{Dirac Operators: Analysis and Geometry}, Beijing Institute of Technology (online).
+}
+\yearitems{2022}{
+  \item Workshop on \emph{Hamiltonian and Dispersive PDEs}, Pisa.
+}
+\yearitems{2021}{
+  \item Workshop \emph{Qualitative Properties of Dispersive PDEs}, Rome.
+}
+\yearitems{2019}{
+  \item ICIAM, Valencia, minisymposium \emph{Dirac Hamiltonians with Critical Singularities}.
+  \item Workshop \emph{Nonlinear Effects in PDEs and Related Problems}, \'Ecole Polytechnique, Palaiseau.
+}
+\yearitems{2018}{
+  \item Mini-workshop \emph{Gibbs Measures for Nonlinear Dispersive Equations}, Oberwolfach.
+  \item Workshop \emph{The Analysis of Dirac Equations}, Orsay.
+  \item Workshop \emph{Nonlinear Dirac Equations and Related Problems}, Bielefeld.
+  \item Workshop \emph{Trails in Quantum Mechanics and Surroundings}, Polytechnic University of Turin.
+}
+\yearitems{2017}{
+  \item Workshop \emph{Linear and Nonlinear Dirac Equation: Advances and Open Problems}, Como.
+}
+\yearitems{2016}{
+  \item 11th AIMS Conference on Dynamical Systems, Differential Equations and Applications, Orlando (two invited talks).
+}
+\yearitems{2014}{
+  \item Workshop \emph{KAM and Dispersive Methods in Hamiltonian PDEs}, Milan.
+  \item Workshop \emph{Analysis of Relativistic and Non-relativistic Models in Quantum Mechanics}, Rome.
+}
+\yearitems{2013}{
+  \item Workshop \emph{Linear and Nonlinear Hyperbolic Equations}, Pisa.
+}
+\yearitems{2012}{
+  \item Journ\'ees EDP, Biarritz.
+  \item Workshop \emph{Blow-up, Dispersion and Solitons}, Rome.
+}
+
+\subsection{Other conference presentations}
+\yearrow{2018}{HYP 2018, Penn State University: \emph{Dispersive dynamics of the Dirac equation on curved spaces}.}
+\yearrow{2015}{IperGSSI 2015, L'Aquila: \emph{Weak dispersion for the massless Dirac--Coulomb model}.}
+\yearrow{2014}{HYP 2014, IMPA, Rio de Janeiro: \emph{Continuity of the KdV flow with respect to Wasserstein metrics}.}
+
+\subsection{Confirmed invitations not taken up due to force majeure}
+%\yearitems{2026}{
+  %\item Workshop \emph{Dynamical and Quantum Systems}, Nice; participation cancelled due to illness.
+%}
+\yearitems{2020}{
+  \item RIMS, Kyoto University; seminar and visit cancelled due to the public health emergency.
+  \item Osaka University; seminar and visit cancelled due to the public health emergency.
+}
+
+\section{Conference organisation and service to the scientific community}
+
+\subsection{Organisation of scientific events}
+\yearitems{2027}{
+  \item Organiser of the conference \emph{Waves and Dispersion in Venice}, Ca' Foscari University of Venice (scheduled).}
+\yearitems{2024}{
+  \item Organiser of the conference \emph{Dispersion and Geometry}, University of Padova.
+}
+\yearitems{2023}{
+  \item Organiser of the workshop \emph{Dirac Days in Padova}, University of Padova.
+}
+\yearitems{2022}{
+  \item Organiser of the conference \emph{Waves in Venice}, Ca' Foscari University of Venice.
+}
+\yearitems{2021}{
+  \item Organiser of the workshop \emph{Equilibria in Dispersive and Kinetic Equations}, CIRM; event scheduled but subsequently cancelled due to the public health emergency.
+}
+\yearitems{2020}{
+  \item Organiser of the workshop \emph{PDEs in Quantum Mechanics}, University of Padova; event scheduled but subsequently cancelled due to the public health emergency.
+}
+
+\subsection{Refereeing and research evaluation}
+Referee for more than twenty international journals, including \emph{Advances in Mathematics}, \emph{Analysis \& PDE}, \emph{Annales Henri Poincar\'e}, \emph{Communications in Partial Differential Equations}, \emph{Journal of Functional Analysis}, \emph{Journal of Differential Equations}, \emph{Transactions of the American Mathematical Society}, \emph{Journal of Fourier Analysis and Applications}, \emph{Journal of Geometric Analysis}, \emph{Nonlinear Analysis} and \emph{ZAMP}. Reviewer for the Austrian Science Fund (FWF).
+
+\newpage
+\section{Teaching}
+
+Continuous teaching responsibilities since 2016 in degree programmes in Mathematics and Engineering, with more than 1,000 documented hours as course lecturer or co-lecturer. Since 2021, annually responsible for two sections of Mathematical Analysis 1 in the Mathematics degree programme, totalling 124 teaching hours per academic year.
+
+\subsection{Courses taught as lecturer in charge}
+\yearrow{2021/22--2026/27}{\textbf{Mathematical Analysis 1, Module A}, Mathematics degree programme, University of Padova: two course sections of 62 hours each per academic year.}
+\yearrow{2020/21}{\textbf{Mathematical Analysis 1}, Chemical and Materials Engineering (72 hours); \textbf{Mathematical Analysis 2-B}, Mathematics (52 hours), University of Padova.}
+\yearrow{2019/20}{\textbf{Mathematical Analysis 1, Module A}, Mathematics (62 hours); co-teaching of \textbf{Linear Algebra and Geometry}, DEI (24 hours), University of Padova.}
+\yearrow{2017/18--2018/19}{\textbf{Mathematical Analysis 1}, Aerospace Engineering, University of Padova (72 hours per year).}
+\yearrow{2016/17}{\textbf{Fundamentals of Linear Algebra and Geometry}, Civil and Environmental Engineering, University of Padova (32 hours).}
+\yearrow{2012/13}{\textbf{Geometry}, Civil Engineering, Sapienza University of Rome.}
+
+\subsection{Tutoring and supplementary teaching activities}
+From 2007 to 2016, regularly delivered tutoring and preparatory courses in Mathematical Analysis, Geometry and Mathematics at Sapienza University of Rome and LUISS Guido Carli.
+
+
+\section{Supervision of degree theses}
+\textbf{Total: 14 theses supervised or co-supervised, including 5 master's and 9 bachelor's theses.}
+
+
+\yearrow{2026}{{\em Giovanna Perrino, Andrea Soave and Ilaria Camilla Merico}: three bachelor's theses in Mathematics.}
+\yearrow{2025}{{\em Francesco Cocco}: master's thesis in Mathematics, co-supervisor, MAPPA programme.}
+\yearrow{2024}{{\em Mirko Gabriel Briglia}: master's thesis in Statistical Sciences; {\em Lamberto Tresoldi}: master's thesis in Mathematics, co-supervisor, MAPPA programme; {\em Nicola Polliero}: bachelor's thesis in Mathematics.}
+\yearrow{2023}{{\em Valentina Moletta}: bachelor's thesis in Mathematics; {\em Tommaso Pistillo and Davide Massenz}: master's theses in Mathematics, co-supervisor, MAPPA programme.}
+\yearrow{2022}{{\em Nicol\`o Tedesco, Lamberto Tresoldi and Annalisa Maricchio}: three bachelor's theses in Mathematics.}
+\yearrow{2020}{{\em Alessandro Berard}i: bachelor's thesis in Mathematics.}
+
+\section{Institutional and administrative service}
+
+\yearrow{2026}{Member of the selection committee for a
+tenure-track researcher (RTT) position, disciplinary group 01/MATH-03, profile MATH-03/A, Department of Mathematics,
+University of Padova.}
+\yearrow{2023--2026}{{Chair of the Degree Programmes} in Mathematics (bachelor's and master's levels), University of Padova.}
+\yearrow{2019--present}{Member of the PhD Programme Board in Mathematics, University of Padova.}
+\yearrow{2022}{Chair of the SID Research Projects and Research Fellowships Committee, Department of Mathematics, University of Padova.}
+\yearrow{2022}{Member of the Joint Faculty--Student Committee, School of Science.}
+\yearrow{2020}{Member of the Accreditation and Evaluation Group (GAV), Department of Mathematics, University of Padova.}
+\yearrow{2018--2022}{Member of the Resources Committee, Department of Mathematics, University of Padova.}
+\yearrow{2018, 2019, 2026}{Member of the Admissions Committee of the Galilean School of Higher Education, Science Division.}
+\yearrow{2020}{Member of the final PhD examination committee for Long Meng, Universit\'e Paris-Dauphine.}
+\yearrow{2020-2023}{Served as a member or alternate member on six selection committees for postdoctoral research fellowships at the Department of Mathematics, University of Padova.}
+\yearrow{2019--2023}{External Galilean School tutor in Mathematical Analysis.}
+
+\newpage
+
+\section{Public engagement, outreach and teaching innovation}
+
+\subsection{MOOCs and teaching innovation}
+\yearrow{2019}{{Coordinator of the ``Mathematical Analysis 1'' MOOC} developed for the open-access Federica platform.
+Activity recorded in the institutional IRIS repository
+of the University of Padova (identifiers FCO-0875 and FCO-0269).}
+
+\subsection{Mathematics outreach and public engagement}
+
+\yearrow{2025}{Invited speaker at TEDx Noventa Vicentina with the talk \emph{Numeri} (Numbers). Activity recorded in IRIS: PEN-13299.}
+\yearrow{2024}{Designed and produced the institutional introductory video for the Mathematics degree programme. Activity recorded in IRIS: PEN-1876.}
+\yearrow{2022--2023}{Participated in editions of the science outreach event \emph{Science for All}. Activity recorded in IRIS: PEN-1948.}
+
+\section{Language skills}
+
+Italian: native; English: fluent; French: good.
+%
+%
+%\vfill
+%\begin{flushright}
+%\textit{Curriculum updated in July 2026.}
+%\end{flushright}
+
+
+\end{document}
