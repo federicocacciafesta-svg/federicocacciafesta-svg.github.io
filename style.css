@@ -190,3 +190,88 @@
 .orbits-only{margin-top:0}
 .orbits-only .viz-orbits{display:block}
 @media(max-width:530px){.orbits-only{height:550px;margin-top:0}}
+
+/* Research collaborations — typographic constellation (v7) */
+.collaborators{margin-top:104px;padding-top:65px;border-top:1px solid var(--rule)}
+.collab-head{display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:28px}
+.collab-head h2{font:normal clamp(48px,5.3vw,72px)/1.04 var(--serif);letter-spacing:-.035em;margin-top:16px}
+.collab-head h2 em{font-weight:400;color:var(--sea)}
+.collab-head p{font-size:14px;line-height:1.8;max-width:345px;color:var(--quiet);margin:0 2px 7px}
+.collab-cloud{position:relative;height:565px;overflow:hidden;background:linear-gradient(150deg,#eef2ed 0%,#f6f6f1 47%,#e7efec 100%);border:1px solid #dde5df;border-radius:4px;isolation:isolate}
+.collab-cloud:before{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(#315e6730 1px,transparent 1px);background-size:25px 25px;mask-image:linear-gradient(90deg,transparent,#000 30%,#000 75%,transparent);opacity:.18}
+.collab-traces{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#89ada7;stroke-width:1.1;opacity:.23;pointer-events:none}
+.collab-traces circle{fill:#c7784e;stroke:none;opacity:.9}
+.collab-nameplate{position:absolute;left:var(--cx);top:var(--cy);z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:39%;padding:3px 9px;border-radius:5px;line-height:1.05;transform:translateY(-2px);transition:transform .22s ease,background .22s ease;text-decoration:none;color:var(--ink)}
+.collab-nameplate .collab-person-name{font:normal var(--fs,22px)/1.09 var(--serif);letter-spacing:-.013em;text-wrap:balance}
+.collab-nameplate.collab-xl{--fs:44px;color:#204950}
+.collab-nameplate.collab-lg{--fs:38px;color:#285862}
+.collab-nameplate.collab-md{--fs:30px;color:#31545b}
+.collab-nameplate.collab-sm{--fs:24px;color:#485d62}
+.collab-nameplate.collab-xs{--fs:19px;color:#516369}
+.collab-person-meta{display:block;font:600 10px/1.4 var(--sans);color:#718782;letter-spacing:.09em;text-transform:uppercase}
+.collab-linked:hover,.collab-linked:focus-visible{background:rgba(255,255,255,.75);transform:translateY(-6px);color:#ba653e}
+.collab-linked{cursor:pointer}.collab-no-link{cursor:default}
+.collab-foot{display:flex;justify-content:space-between;gap:25px;margin-top:19px;color:#697d7c;font-size:11px;line-height:1.6}
+.collab-legend-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-right:8px}
+@media(max-width:1000px){
+ .collab-cloud{height:auto;min-height:0;padding:35px 24px 32px;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:19px 26px}
+ .collab-nameplate{position:relative;left:auto;top:auto;max-width:calc(50% - 16px);transform:none;align-items:center;text-align:center}
+ .collab-traces{opacity:.11}
+ .collab-nameplate.collab-xl{--fs:37px}.collab-nameplate.collab-lg{--fs:33px}.collab-nameplate.collab-md{--fs:27px}.collab-nameplate.collab-sm{--fs:22px}.collab-nameplate.collab-xs{--fs:18px}
+}
+@media(max-width:650px){
+ .collaborators{margin-top:66px;padding-top:45px}
+ .collab-head{display:block;margin-bottom:24px}.collab-head p{margin:17px 0 0;max-width:100%}
+ .collab-cloud{padding:24px 13px;gap:20px 12px;justify-content:space-evenly}
+ .collab-nameplate{max-width:calc(50% - 8px);width:auto;padding:3px;gap:5px}
+ .collab-nameplate.collab-xl{--fs:30px}.collab-nameplate.collab-lg{--fs:27px}.collab-nameplate.collab-md{--fs:23px}.collab-nameplate.collab-sm{--fs:20px}.collab-nameplate.collab-xs{--fs:16px}
+ .collab-person-meta{font-size:9px;letter-spacing:.03em}
+ .collab-foot{display:block}.collab-foot>span{display:block;margin-bottom:6px}
+}
+@media(prefers-reduced-motion:reduce){.collab-nameplate{transition:none}}
+
+
+/* Correnti libere — Research collaborators, selected design 2026-11-25 */
+.collaborators{margin:110px 0 0;padding:61px 0 0;border-top:1px solid var(--rule)}
+.collab-head{display:block;margin-bottom:28px}
+.collab-head h2{font:normal clamp(49px,5.2vw,74px)/1.07 var(--serif);letter-spacing:-.032em;margin:16px 0 0}
+.collab-head h2 em{color:var(--sea);font-weight:normal}
+.collab-scene{container-type:inline-size;position:relative;height:660px;min-height:660px;overflow:hidden;isolation:isolate;border:1px solid #e1e6df;background:#f3f5f0}
+.collab-scene:before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;background:radial-gradient(ellipse at 24% 22%,rgba(196,221,210,.22),transparent 45%),radial-gradient(ellipse at 84% 84%,rgba(227,210,188,.2),transparent 53%)}
+.collab-decoration{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:1}
+.collab-person{position:absolute;left:var(--cx);top:var(--cy);z-index:2;color:#31565a;text-decoration:none;max-width:39%;border-radius:4px;transition:color .24s ease,transform .25s ease,background-color .25s ease;text-shadow:0 1px 0 rgba(255,255,255,.7);padding:4px 6px}
+.collab-person-text{font:normal var(--name-size,23px)/1.08 var(--serif);letter-spacing:-.021em;text-wrap:balance;display:block}
+.collab-person.size-xl{--name-size:clamp(24px,4.4cqw,48px);color:#234951}
+.collab-person.size-lg{--name-size:clamp(21px,3.65cqw,40px);color:#2e5559}
+.collab-person.size-md{--name-size:clamp(19px,2.95cqw,31px);color:#32565c}
+.collab-person.size-sm{--name-size:clamp(16px,2.18cqw,23px);color:#56686d}
+.collab-person.size-xs{--name-size:clamp(14px,1.8cqw,19px);color:#596c6d}
+.collab-person.is-linked:hover,.collab-person:focus-visible{color:#a66443;transform:translateY(-5px);background:rgba(255,255,255,.77);outline:none;z-index:7}
+.collab-person.is-unlinked:hover{transform:translateY(-3px);z-index:7}
+.collab-person:focus-visible{outline:2px solid #426f74;outline-offset:2px}
+.collab-tip{position:absolute;z-index:10;left:8px;bottom:calc(100% + 3px);display:block;min-width:max-content;max-width:230px;background:#243f45;border-radius:3px;padding:5px 9px;font:600 11px/1.4 var(--sans);letter-spacing:.02em;color:#fff;opacity:0;visibility:hidden;transform:translateY(5px);transition:.18s;box-shadow:0 5px 15px #17383d20;pointer-events:none}
+.collab-person:hover .collab-tip,.collab-person:focus-visible .collab-tip{opacity:1;visibility:visible;transform:translateY(0)}
+.collab-person.is-unlinked{cursor:default}
+.collab-footer{font:12px/1.6 var(--sans);color:#6a7d7c;margin-top:18px;letter-spacing:.012em}
+@media(max-width:750px){
+ .collab-scene{height:730px;min-height:730px}
+ .collab-person{left:var(--mx);top:var(--my);max-width:47%}
+ .collab-person.size-xl{--name-size:clamp(23px,6.5cqw,33px)}
+ .collab-person.size-lg{--name-size:clamp(21px,5.5cqw,29px)}
+ .collab-person.size-md{--name-size:clamp(18px,4.6cqw,26px)}
+ .collab-person.size-sm{--name-size:clamp(16px,4cqw,21px)}
+ .collab-person.size-xs{--name-size:clamp(14px,3.3cqw,18px)}
+ .collab-decoration{opacity:.5}
+}
+@media(max-width:500px){
+ .collaborators{margin-top:72px;padding-top:46px}
+ .collab-head h2{font-size:50px}
+ .collab-scene{height:850px;min-height:850px}
+ .collab-person{max-width:48%;padding:3px}
+ .collab-person.size-xl{--name-size:clamp(22px,6.6cqw,29px)}
+ .collab-person.size-lg{--name-size:clamp(20px,6cqw,26px)}
+ .collab-person.size-md{--name-size:clamp(18px,5.2cqw,23px)}
+ .collab-person.size-sm{--name-size:clamp(16px,4.5cqw,20px)}
+ .collab-person.size-xs{--name-size:clamp(14px,3.7cqw,17px)}
+}
+@media(prefers-reduced-motion:reduce){.collab-person,.collab-decoration,.collab-tip{transition:none}}
